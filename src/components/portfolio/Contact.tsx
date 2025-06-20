@@ -3,17 +3,34 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin, Phone, Instagram, Facebook, File } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+
 
 const Contact = () => {
   const { ref: sectionRef, isVisible: sectionVisible } = useScrollAnimation();
   const { ref: contentRef, isVisible: contentVisible } = useScrollAnimation({ threshold: 0.1 });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log('Form submitted');
-    // Handle form submission logic here
+    const formData = new FormData(e.currentTarget);
+    
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (response.ok) {
+        alert('Message sent successfully!');
+        e.currentTarget.reset();
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      alert('Failed to send message. Please try again later.');
+    }
   };
 
   return (
@@ -34,7 +51,7 @@ const Contact = () => {
         }`}>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Get In Touch</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Feel free to contact me for any inquiries.
+            Feel free to contact me for any inquiries or just to say hello!
           </p>
         </div>
         
@@ -48,9 +65,9 @@ const Contact = () => {
             <div>
               <h3 className="text-2xl font-semibold mb-6">Let's Connect</h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                I'm always interested in hearing about new opportunities and exciting projects. 
-                Whether you're a company looking to hire, or you're a fellow developer wanting to connect, 
-                don't hesitate to reach out.
+                I'm always interested in hearing about new opportunities, exciting projects, 
+                or just chatting about tech. Whether you're a company looking to hire, 
+                a fellow developer, or someone with an interesting idea, don't hesitate to reach out.
               </p>
             </div>
             
@@ -88,13 +105,21 @@ const Contact = () => {
               <Button variant="outline" size="sm" asChild className="hover-scale">
                 <a href="https://github.com" target="_blank" rel="noopener noreferrer">
                   <Github size={18} className="mr-2" />
-                  GitHub
                 </a>
               </Button>
               <Button variant="outline" size="sm" asChild className="hover-scale">
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
                   <Linkedin size={18} className="mr-2" />
-                  LinkedIn
+                </a>
+              </Button>
+              <Button variant="outline" size="sm" asChild className="hover-scale">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                  <Instagram size={18} className="mr-2" />
+                </a>
+              </Button>
+              <Button variant="outline" size="sm" asChild className="hover-scale">
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                  <Facebook size={18} className="mr-2" />
                 </a>
               </Button>
             </div>
@@ -107,7 +132,7 @@ const Contact = () => {
               : 'opacity-0 translate-x-8'
           }`}>
             <CardContent className="p-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6" encType="multipart/form-data">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className={`transition-all duration-400 ${
                     contentVisible 
@@ -119,7 +144,7 @@ const Contact = () => {
                     <label htmlFor="name" className="block text-sm font-medium mb-2">
                       Name
                     </label>
-                    <Input id="name" placeholder="Your name" required />
+                    <Input id="name" name="name" placeholder="Your name" required />
                   </div>
                   <div className={`transition-all duration-400 ${
                     contentVisible 
@@ -131,7 +156,7 @@ const Contact = () => {
                     <label htmlFor="email" className="block text-sm font-medium mb-2">
                       Email
                     </label>
-                    <Input id="email" type="email" placeholder="your@email.com" required />
+                    <Input id="email" name="email" type="email" placeholder="your@email.com" required />
                   </div>
                 </div>
                 
@@ -145,7 +170,7 @@ const Contact = () => {
                   <label htmlFor="subject" className="block text-sm font-medium mb-2">
                     Subject
                   </label>
-                  <Input id="subject" placeholder="Project inquiry" required />
+                  <Input id="subject" name="subject" placeholder="Project inquiry" required />
                 </div>
                 
                 <div className={`transition-all duration-400 ${
@@ -160,10 +185,32 @@ const Contact = () => {
                   </label>
                   <Textarea 
                     id="message" 
+                    name="message"
                     rows={5}
                     placeholder="Tell me about your project..."
                     required 
                   />
+                </div>
+
+                <div className={`transition-all duration-400 ${
+                  contentVisible 
+                    ? 'opacity-100 translate-y-0' 
+                    : 'opacity-0 translate-y-4'
+                }`}
+                style={{ transitionDelay: '1150ms' }}
+                >
+                  <label htmlFor="attachment" className="block text-sm font-medium mb-2">
+                    Attachment (Optional)
+                  </label>
+                  <div className="flex items-center gap-2">
+                    <File size={18} className="text-muted-foreground" />
+                    <Input 
+                      id="attachment" 
+                      name="attachment"
+                      type="file" 
+                      className="cursor-pointer"
+                    />
+                  </div>
                 </div>
                 
                 <Button 
@@ -175,7 +222,7 @@ const Contact = () => {
                   }`}
                   style={{ transitionDelay: '1200ms' }}
                 >
-                  Send Message
+                  Send Mail
                 </Button>
               </form>
             </CardContent>
