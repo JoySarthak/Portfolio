@@ -11,8 +11,8 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "Full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include user authentication, product management, and payment processing.",
+      title: "Online Library Management System",
+      description: "Full-stack OLMS solution with React, Node.js, and Stripe integration. Features include user authentication, Book management, and Renewal system",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop",
       technologies: ["React", "Node.js", "MongoDB", "Stripe"],
       github: "https://github.com",
@@ -27,7 +27,7 @@ const Projects = () => {
       live: "https://example.com"
     },
     {
-      title: "Analytics Dashboard",
+      title: "Smart Analytics Dashboard",
       description: "Data visualization dashboard with interactive charts, real-time metrics, and comprehensive reporting capabilities for business intelligence.",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=400&fit=crop",
       technologies: ["React", "D3.js", "Python", "PostgreSQL"],
