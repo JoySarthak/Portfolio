@@ -12,7 +12,7 @@ const Projects = () => {
   const projects = [
     {
       title: "Online Library Management System",
-      description: "Full-stack OLMS solution with React, Node.js, and Stripe integration. Features include user authentication, Book management, and Renewal system",
+      description: "Full-stack OLMS solution with React, Node.js, MongoDB atlas. Features include user authentication, Book management, and fineless Renewal system",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop",
       technologies: ["React", "Node.js", "MongoDB", "Stripe"],
       github: "https://github.com",
@@ -20,15 +20,15 @@ const Projects = () => {
     },
     {
       title: "Data Analytics & ML Dashboard",
-      description: "Collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
+      description: "EDA on Mobile Brand Sales Dataset and Selling price prediction using and evaluation of different ML models. Includes data cleaning, visualization, and model deployment.",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop",
-      technologies: ["Python", "Pandas", "Scikit-learn", "Django"],
+      technologies: ["Python", "Pandas", "Scikit-learn", "Django", "Seaborn", "Matplotlib"],
       github: "https://github.com",
       live: "https://example.com"
     },
     {
       title: "Smart Dashboard for Data Science",
-      description: "Data visualization dashboard with interactive charts, real-time metrics, and comprehensive reporting capabilities for business intelligence.",
+      description: "Data visualization dashboard with interactive charts, real-time metrics, cleaning and analysis tools, and machine learning model integration for any dataset. Smart automation for various data science tasks.",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=400&fit=crop",
       technologies: ["Python", "Streamlit", "Plotly", "Pandas", "Scikit-learn"],
       github: "https://github.com",
