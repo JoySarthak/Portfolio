@@ -14,7 +14,7 @@ const Projects = () => {
       title: "Online Library Management System",
       description: "Full-stack OLMS solution with React, Node.js, MongoDB atlas. Features include user authentication, Book management, and fineless Renewal system",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+      technologies: ["React", "Node.js", "MongoDB", "Express"],
       github: "https://github.com",
       live: "https://example.com"
     },
