@@ -19,18 +19,18 @@ const Projects = () => {
       live: "https://example.com"
     },
     {
-      title: "Task Management App",
+      title: "Data Analytics & ML Dashboard",
       description: "Collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop",
-      technologies: ["Vue.js", "Firebase", "Tailwind CSS"],
+      technologies: ["Python", "Pandas", "Scikit-learn", "Django"],
       github: "https://github.com",
       live: "https://example.com"
     },
     {
-      title: "Smart Analytics Dashboard",
+      title: "Smart Dashboard for Data Science",
       description: "Data visualization dashboard with interactive charts, real-time metrics, and comprehensive reporting capabilities for business intelligence.",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=400&fit=crop",
-      technologies: ["React", "D3.js", "Python", "PostgreSQL"],
+      technologies: ["Python", "Streamlit", "Plotly", "Pandas", "Scikit-learn"],
       github: "https://github.com",
       live: "https://example.com"
     }
