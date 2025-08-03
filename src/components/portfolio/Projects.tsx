@@ -11,28 +11,28 @@ const Projects = () => {
 
   const projects = [
     {
-      title: "Online Library Management System",
-      description: "Full-stack OLMS solution with React, Node.js, MongoDB atlas. Features include user authentication, Book management, and fineless Renewal system",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop",
-      technologies: ["React", "Node.js", "MongoDB", "Express"],
-      github: "https://github.com",
-      live: "https://example.com"
+      title: "Home-Tree, The Modern-Home-Management App",
+      description: "Home-Tree is a comprehensive family management application designed to streamline household coordination, task management, and communication between family members.",
+      image: "/p1img.png?w=600&h=400&fit=crop",
+      technologies: ["Next.js", "Tailwind CSS", "MongoDB", "Lucide-React", "Shadcn-UI"],
+      github: "https://github.com/JoySarthak/Home-Tree",
+      live: "https://home-tree.vercel.app/"
     },
     {
-      title: "Data Analytics & ML Dashboard",
-      description: "EDA on Mobile Brand Sales Dataset and Selling price prediction using and evaluation of different ML models. Includes data cleaning, visualization, and model deployment.",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop",
-      technologies: ["Python", "Pandas", "Scikit-learn", "Django", "Seaborn", "Matplotlib"],
-      github: "https://github.com",
-      live: "https://example.com"
+      title: "Online Library Management System",
+      description: "Full-stack OLMS solution with React, Node.js, MongoDB atlas. Features include user authentication, Book management, and fineless Renewal system",
+      image: "/p2img.png?w=600&h=400&fit=crop",
+      technologies: ["React", "Node.js", "MongoDB", "Express"],
+      github: "https://github.com/JoySarthak/Online_Modern_Library",
+      live: "https://online-modern-library.vercel.app/"
     },
     {
       title: "Smart Dashboard for Data Science",
       description: "Data visualization dashboard with interactive charts, real-time metrics, cleaning and analysis tools, and machine learning model integration for any dataset. Smart automation for various data science tasks.",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=600&h=400&fit=crop",
+      image: "p3img.jpg?w=600&h=400&fit=crop",
       technologies: ["Python", "Streamlit", "Plotly", "Pandas", "Scikit-learn"],
-      github: "https://github.com",
-      live: "https://example.com"
+      github: "https://github.com/JoySarthak/SmartDataBoard",
+      live: "https://datascience-smart-dashboard.streamlit.app/"
     }
   ];
 

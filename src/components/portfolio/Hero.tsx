@@ -75,8 +75,6 @@ const Hero = () => {
                     3500,
                     "Fullstack Development",
                     3500,
-                    "Competitive coding and DSA",
-                    3500,
                     "AI Tools & Prompt Engineering",
                     3500,
                   ]}
@@ -112,7 +110,7 @@ const Hero = () => {
                 <Github size={20} />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/sarthak-dutta-0b8133303/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 rounded-full border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 flex items-center justify-center hover:scale-110"
@@ -150,7 +148,7 @@ const Hero = () => {
 
               {/* Profile image */}
               <img
-                src="/profilePic.jpg"
+                src="/profilePic2.jpg"
                 alt="John Kendric"
                 className={`relative w-80 h-96 object-cover rounded-3xl shadow-2xl border-4 border-primary/30 ${imageAnimation}`}
               />
