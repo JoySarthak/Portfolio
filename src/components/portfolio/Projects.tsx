@@ -29,7 +29,7 @@ const Projects = () => {
     {
       title: "Smart Dashboard for Data Science",
       description: "Data visualization dashboard with interactive charts, real-time metrics, cleaning and analysis tools, and machine learning model integration for any dataset. Smart automation for various data science tasks.",
-      image: "p3img.jpg?w=600&h=400&fit=crop",
+      image: "p3img.png?w=600&h=400&fit=crop",
       technologies: ["Python", "Streamlit", "Plotly", "Pandas", "Scikit-learn"],
       github: "https://github.com/JoySarthak/SmartDataBoard",
       live: "https://datascience-smart-dashboard.streamlit.app/"
