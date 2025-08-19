@@ -43,7 +43,7 @@ const Skills = () => {
     },
     {
       title: "frontend & Backend",
-      skills: ["React", "Node.js", "Express", "Tailwind CSS", "MongoDB"],
+      skills: ["React", "Node.js", "Express", "Tailwind CSS", "MongoDB", "Next.js", "Shadcn-UI", "Lucide-React"],
     },
     {
       title: "Core",

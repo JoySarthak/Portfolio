@@ -93,7 +93,7 @@ const Hero = () => {
               Passionate about Data-Science, Data-Analysis, Machine Learning &
               AI solutions, Database Management with various techniques, love
               coding and exploring different way to achieve solution, Tech
-              Enthusiast, Fullstack Development with different framewroks.
+              Enthusiast, Fullstack Development with different frameworks.
             </p>
 
             {/* Social Icons */}
