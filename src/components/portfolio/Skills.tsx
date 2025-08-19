@@ -48,10 +48,11 @@ const Skills = () => {
     {
       title: "Core",
       skills: [
+        "Data Science",
         "DBMS",
         "Webdev",
         "Machine Learning",
-        "AI",
+        "AI Tools & Prompt Engineering",
         "DSA",
       ],
     },
