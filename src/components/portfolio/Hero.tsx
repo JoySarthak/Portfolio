@@ -73,7 +73,7 @@ const Hero = () => {
                     3500, // Waits 2s
                     "Database Management with SQL/NoSQL",
                     3500,
-                    "Fullstack Development",
+                    "Web-Development",
                     3500,
                     "AI Tools & Prompt Engineering",
                     3500,

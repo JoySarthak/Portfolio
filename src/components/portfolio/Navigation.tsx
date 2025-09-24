@@ -58,7 +58,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="font-bold text-2xl text-primary transition-all duration-300 hover:scale-105">
-            Portfolio
+            SARTHAK
           </div>
 
           {/* Desktop Navigation */}
